@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import { Container,Row, Col } from 'react-bootstrap';
 import './App.css';
+import PlayersList from './component/PlayersList';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container style={{marginTop:"50px"}}>
+      <Row>
+        <Col lg={4} style={{marginTop:"50px"}}>
+           {/* the players card  */}
+        <PlayersList/>
+        </Col>
+        <Col lg={4} style={{marginTop:"50px"}}>
+          {/* the players card  */}
+        <PlayersList/>
+        </Col>
+        <Col lg={4} style={{marginTop:"50px"}}>
+          {/* the players card  */}
+        <PlayersList/>
+        </Col>
+      </Row>
+    </Container>
+     
   );
 }
 
